@@ -25,3 +25,5 @@ Route::post('/register', [UserController::class, 'registerUser']);
 Route::post('/login', [UserController::class, 'login'])->name('login');
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
+Route::get('fetchdata',[UserController::class,'showData']);
+

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Auth;
 
@@ -11,8 +12,8 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
     public function index(){
-    return view('home');
-}
+        return view('home');
+    }
 
 
     public function registerUser(Request $request){
@@ -53,5 +54,12 @@ class UserController extends Controller
         $request->session()->regenerateToken();
         return redirect('/');
     }
+
+    public function showData()
+    {
+        $data = Http::get('https://jsonplaceholder.typicode.com/posts')->json();
+        return view('fetchdata')->with('value', $data);
+    }
+
 
 }
