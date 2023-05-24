@@ -26,4 +26,5 @@ Route::post('/login', [UserController::class, 'login'])->name('login');
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
 Route::get('fetchdata',[UserController::class,'showData']);
+Route::get('getuser',[UserController::class,'getUser']);
 

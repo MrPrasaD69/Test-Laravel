@@ -62,4 +62,9 @@ class UserController extends Controller
     }
 
 
+    public function getUser(){
+        $user=User::all(); //fetch all records from DB
+        return view('getuser',['users'=>$user]);
+    }
+
 }
