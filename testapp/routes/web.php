@@ -26,5 +26,6 @@ Route::post('/login', [UserController::class, 'login'])->name('login');
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
 Route::get('fetchdata',[UserController::class,'showData']);
-Route::get('getuser',[UserController::class,'getUser']);
+Route::get('getuser',[UserController::class,'getUser'])->name('getUser'); //define route with name method, capture that name in Front End for routing
+Route::get('welcome',[UserController::class,'goBack'])->name('goBack');
 

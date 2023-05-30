@@ -41,7 +41,7 @@
                     @endforeach
                 </tbody>
             </table>
-
+            <a href="{{ route('goBack') }}" class="btn btn-warning">Go Back</a>
        </div>
     </body>
 </html>

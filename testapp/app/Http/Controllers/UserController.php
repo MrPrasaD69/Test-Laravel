@@ -67,4 +67,7 @@ class UserController extends Controller
         return view('getuser',['users'=>$user]);
     }
 
+    public function goBack(){
+        return view('welcome');
+    }
 }
