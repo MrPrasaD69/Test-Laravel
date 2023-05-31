@@ -29,6 +29,7 @@
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
                         <th scope="col">Password</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,6 +38,7 @@
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
                         <td>********</td>
+                        <td><a href="" class="btn btn-success">EDIT</a><a href="" class="btn btn-danger">DELETE</a></td>
                     </tr>
                     @endforeach
                 </tbody>
