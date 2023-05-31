@@ -38,7 +38,7 @@
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
                         <td>********</td>
-                        <td><a href="" class="btn btn-success">EDIT</a><a href="" class="btn btn-danger">DELETE</a></td>
+                        <td><a href="{{route('edituser',$user->id)}}" class="btn btn-success">EDIT</a><a href="" class="btn btn-danger">DELETE</a></td>
                     </tr>
                     @endforeach
                 </tbody>

@@ -70,4 +70,11 @@ class UserController extends Controller
     public function goBack(){
         return view('welcome');
     }
+
+    public function editUser($id)
+    {
+        $user = User::find($id); // Fetch the user record based on the ID
+        return view('edituser', ['user' => $user]);
+    }
+
 }
